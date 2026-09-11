@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<title>Sign in · MAX VIP</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Cpath d='M9 22V10l7 8 7-8v12' stroke='%23ff4d6a' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body data-page="login">
+
+  <!-- Animated RGB liquid background -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="blob b1"></div><div class="blob b2"></div>
+    <div class="blob b3"></div><div class="blob b4"></div>
+    <div class="vignette"></div>
+  </div>
+
+  <main class="auth-wrap">
+    <div class="auth-stack">
+      <div class="glass rgb-border auth-card">
+        <div class="auth-brand">
+          <div class="brand-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2 20 7v10l-8 5-8-5V7l8-5Z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M8.5 15V9l3.5 4 3.5-4v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-name">MAX <span class="rgb-text">VIP</span></div>
+            <div class="brand-sub">License Management Panel</div>
+          </div>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="field">
+            <label for="liUser">Username</label>
+            <input class="input" id="liUser" name="username" placeholder="Enter your username" autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label for="liPass">Password</label>
+            <div class="input-pass">
+              <input type="password" class="input" id="liPass" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+              <button type="button" class="eye" data-eye="liPass" aria-label="Toggle password visibility">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-msg" id="loginError" hidden></div>
+          <button class="btn btn-primary btn-block" id="loginBtn" type="submit">Sign In</button>
+        </form>
+
+        <div class="auth-alt">Need access? <a href="register.html">Register with a referral code</a></div>
+      </div>
+
+      <footer class="auth-footer">
+        <b>MAX VIP</b> · MADE BY MAX · TG: <a href="https://t.me/kryvexo" target="_blank" rel="noopener">@kryvexo</a>
+      </footer>
+    </div>
+  </main>
+
+  <!-- Full-screen loading overlay is COMPLETELY REMOVED -->
+
+  <div class="toast-root" id="toastRoot"></div>
+</body>
+</html>
